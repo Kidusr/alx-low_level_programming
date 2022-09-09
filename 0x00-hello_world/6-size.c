@@ -2,6 +2,7 @@
 
 /**
 * main - print the string in the put function
+*
 *Description: using the main funchtion
 *this programming prints "size
 * Return: 0
