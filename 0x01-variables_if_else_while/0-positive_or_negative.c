@@ -1,21 +1,21 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h
+#include <stdio.h>
 
-/**
-* main - print if the number is postive, zero or negative
-*
-* Description: using the main function
-*this program prints if the number is postive , zero or negative
-*Return: 0
-*/
-int main(void)
-{
-int n;
-srand(time(0));
-n = rand() - Rand_MAX / 2;
-	/*your code goes there
-	if (n>0)
+	/**
+	* main - print if the number is postive, zero or negative
+	*
+	* Description: using the main function
+	*this program prints if the number is postive , zero or negative
+	*Return: 0
+	*/
+	int main(void)
+	{
+	int n;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+		/*your code goes there
+		if (n>0)
 {
 	printf("%i is postive\n", n);
 }
