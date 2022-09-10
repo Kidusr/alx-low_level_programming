@@ -4,7 +4,7 @@
 *
 Description: using the main function
 *this program prints "programming is postive ,zero or negative
-*Return 0
+*Return: 0
 */
 int main(void)
 {
@@ -17,5 +17,5 @@ if (ch != 'e' && ch != 'q')
 }
 }
 putchar(ch);
-return 0;
+return (0);
 }
