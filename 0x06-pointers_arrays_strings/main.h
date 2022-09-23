@@ -7,6 +7,7 @@
  *
  * desc: Header file containing prototypes for all functions
  * used in the 0x06.c -more pointers, arrays and strings dictionary
+ */
 
 
 int _putchar(char c);
