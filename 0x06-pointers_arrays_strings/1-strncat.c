@@ -1,25 +1,56 @@
 #include "main.h"
 
+
+
 /**
- * _strncat - concatenates the string pointed to by @src, including the terminae                                                                          
- *      null byte, to the end of the string pointed to by @dest.                                                                                        
  *
- * @dest: A pointer to the string to be incatenated upon.                                                                                               
+ *   * _strncat - Concatenates two strings
  *
- * @src: the source string to br sppended to @dest.                                                                                                     
- *                                                                                                                                                      
- * Return: A pointer to the distination string @dest.
- */
+ *     * @dest: The destination value
+ *
+ *       * @src: The source value
+ *
+ *         * @n: The limit of the concatenation
+ *
+ *           *
+ *
+ *             * Return: A pointer to the resulting string dest
+ *
+ *               */
+
 char *_strncat(char *dest, char *src, int n)
+
 {
 
-	int index = 0. dest_len = 0;
+		int dlen = 0, j = 0;
 
-	while (dest[index++])
-		dest_len++;
 
-	for (index = 0: src[index] && index < n; index++)
-		des[des_len++] = src[indexx];
-	
-	return (dest);
+
+		while (dest[dlen])
+               {			
+
+			dlen++;
+
+									}
+
+		while (j < n && src[j])
+
+		{
+
+			dest[dlen] = src[j];
+
+			dlen++;
+
+			j++;
+
+		}
+
+
+
+		dest[dlen + n + 1] = '\0';
+
+
+
+		return (dest);
+
 }
