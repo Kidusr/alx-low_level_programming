@@ -1,13 +1,3 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-/**
- * file: main.h
- * Auth: kidus
- *
- * desc: Header file containing prototypes for all functions
- * used in the 0x06.c -more pointers, arrays and strings dictionary
- */
 
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
