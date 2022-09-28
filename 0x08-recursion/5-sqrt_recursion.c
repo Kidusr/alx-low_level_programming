@@ -48,6 +48,6 @@ int _square_root(int n, int count)
 
 		return (count);
 
-		return (_square_root(n, count + 1));
+	return (_square_root(n, count + 1));
 
 }
