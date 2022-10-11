@@ -3,7 +3,6 @@
 
 
 /**
- *
  * free_dog - frees a dog
  *
  * @d: the pointer of the struct to be free

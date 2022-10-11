@@ -3,7 +3,6 @@
 
 
 /**
- *
  * new_dog - creates a new dog
  *
  * @name: name of dog
@@ -28,13 +27,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 
 	if (name == NULL || owner == NULL)
-
 		return (NULL);
 
 	dog = malloc(sizeof(dog_t));
 
 	if (dog == NULL)
-
 		return (NULL);
 
 	for (nl = 0; name[nl]; nl++)
@@ -50,9 +47,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 
 		free(dog);
-
 		return (NULL);
-
 	}
 
 	for (i = 0; i < nl; i++)
@@ -72,11 +67,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog->owner == NULL)
 
 	{
-
 		free(dog->name);
 	 																				free(dog);
 	 																				return (NULL);
-
 																				}
 
 	for (i = 0; i < ol; i++)
