@@ -2,7 +2,6 @@
 #define DOG_H
 
 /**
- *
  * struct dog - a struct for a dog id
  *
  * @name: dog's name

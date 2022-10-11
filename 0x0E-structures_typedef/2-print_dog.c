@@ -3,7 +3,6 @@
 #include <stdio.h>
 
 /**
- *
  * print_dog - initilizes a variable of type struct dog
  *
  * @d: the struct
