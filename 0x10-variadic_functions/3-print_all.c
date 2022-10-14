@@ -4,18 +4,11 @@
 
 #include <stdarg.h>
 
-
-
 void print_char(va_list arg);
-
 void print_int(va_list arg);
-
 void print_float(va_list arg);
-
 void print_string(va_list arg);
-
 void print_all(const char * const format, ...);
-
 
 
 /**
@@ -23,8 +16,7 @@ void print_all(const char * const format, ...);
  *
  * @arg: A list of arguments pointing to
  *
- *       the character to be printed.
- *
+ *     the character to be printed.
  */
 
 void print_char(va_list arg)
@@ -43,13 +35,11 @@ void print_char(va_list arg)
 
 
 /**
- *
  * print_int - Prints an int.
  *
  * @arg: A list of arguments pointing to
  *
  *     the integer to be printed.
- *
  */
 
 void print_int(va_list arg)
@@ -66,14 +56,12 @@ void print_int(va_list arg)
 }
 
 
-
 /**
  * print_float - Prints a float.
  *
  * @arg: A list of arguments pointing to
  *
  *       the float to be printed.
- *
  */
 
 void print_float(va_list arg)
@@ -96,8 +84,7 @@ void print_float(va_list arg)
  *
  * @arg: A list of arguments pointing to
  *
- *     the string to be printed.
- *
+ *   the string to be printed.
  */
 
 void print_string(va_list arg)
@@ -115,7 +102,6 @@ void print_string(va_list arg)
 	{
 
 		printf("(nil)");
-
 		return;
 
 	}
@@ -137,10 +123,9 @@ void print_string(va_list arg)
  *
  * Description: Any argument not of type char, int, float,
  *
- *            or char * is ignored.
+ *	or char * is ignored.
  *
- *            If a string argument is NULL, (nil) is printed instead.
- *
+ *	If a string argument is NULL, (nil) is printed instead.
  */
 
 void print_all(const char * const format, ...)
@@ -169,7 +154,6 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 
 
-
 	while (format && (*(format + i)))
 
 	{
@@ -178,7 +162,6 @@ void print_all(const char * const format, ...)
 
 
 		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
-
 			j++;
 
 
@@ -186,9 +169,10 @@ void print_all(const char * const format, ...)
 
 		{
 
-																						printf("%s", separator);
-																						funcs[j].print(args);
-																						separator = ", ";
+
+		printf("%s", separator);
+		funcs[j].print(args);
+		separator = ", ";
 
 																					}
 
@@ -199,7 +183,6 @@ void print_all(const char * const format, ...)
 
 
 	printf("\n");
-
 	va_end(args);
 
 }
