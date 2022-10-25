@@ -17,14 +17,14 @@ void free_listint(listint_t *head)
 
 	listint_t *var_temp;
 
-			while ((var_temp = head) != NULL)
+	while ((var_temp = head) != NULL)
 
-					{
+		{
 
-						head = head->next;
+			head = head->next;
 
-						free(var_temp);
+			free(var_temp);
 
-					}
+		}
 
 }
