@@ -19,12 +19,12 @@ void free_listint(listint_t *head)
 
 	while ((var_temp = head) != NULL)
 
-		{
+	{
 
-			head = head->next;
+		head = head->next;
 
-			free(var_temp);
+		free(var_temp);
 
-		}
+	}
 
 }

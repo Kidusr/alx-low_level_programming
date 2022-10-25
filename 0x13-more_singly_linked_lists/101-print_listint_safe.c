@@ -52,6 +52,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 
 	size_t node_count = 0;
+
 	listp_t *hptr, *new_node, *add;
 
 	hptr = NULL;
@@ -66,6 +67,7 @@ size_t print_listint_safe(const listint_t *head)
 		new_node->p = (void *)head;
 		new_node->next = hptr;
 		hptr = new_node;
+
 		add = hptr;
 
 		while (add->next != NULL)
