@@ -24,16 +24,13 @@ listint_t *find_listint_loop(listint_t *head)
 	fst_ptr = fst_ptr->next->next;
 
 	while (fst_ptr && fst_ptr->next)
-
 	{
 		if (slw_ptr == fst_ptr)
-
 			break;
 
 		slw_ptr = slw_ptr->next;
 		fst_ptr = fst_ptr->next->next;
 	}
-
 
 	if (slw_ptr != fst_ptr)
 		return (NULL);
@@ -46,5 +43,7 @@ listint_t *find_listint_loop(listint_t *head)
 		slw_ptr = slw_ptr->next;
 		fst_ptr = fst_ptr->next;
 	}
+
 	return (slw_ptr);
+
 }

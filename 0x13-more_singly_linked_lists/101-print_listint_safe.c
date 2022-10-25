@@ -9,7 +9,6 @@
  * @head: double pointer to head
  *
  * Return: void
- *
  */
 
 void free_listp(listp_t **head)
@@ -20,23 +19,19 @@ void free_listp(listp_t **head)
 	listp_t *current_node;
 
 	if (head != NULL)
-
 	{
-
 		current_node = *head;
 
 		while ((var_temp = current_node) != NULL)
 		{
 			current_node = current_node->next;
-			free(var_temp);
 
+			free(var_temp);
 		}
 
 		*head = NULL;
 	}
-
 }
-
 
 /**
  * print_listint_safe - prints a SLL
@@ -50,13 +45,11 @@ void free_listp(listp_t **head)
 size_t print_listint_safe(const listint_t *head)
 
 {
-
 	size_t node_count = 0;
 
 	listp_t *hptr, *new_node, *add;
 
 	hptr = NULL;
-
 	while (head != NULL)
 	{
 		new_node = malloc(sizeof(listp_t));
@@ -77,16 +70,18 @@ size_t print_listint_safe(const listint_t *head)
 			if (head == add->p)
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
-				free_listp(&hptr)
+				free_listp(&hptr);
 
 				return (node_count);
 			}
 		}
+
 		printf("[%p] %d\n", (void *)head, head->n);
+
 		head = head->next;
 		node_count++;
-
 	}
+
 	free_listp(&hptr);
 
 	return (node_count);
