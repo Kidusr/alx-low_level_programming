@@ -1,35 +1,24 @@
 #include "main.h"
 
 
-
 /**
+ * get_endianness - function to checks the endianness
  *
- *  * get_endianness - function to checks the endianness
+ * Return: 0 or 1
  *
- *   * Return: 0 or 1
- *
- *    */
+ */
 
 int get_endianness(void)
 
 {
+	unsigned int x;
 
-		unsigned int x;
+	char *c;
 
-			char *c;
+	x = 1;
 
+	c = (char *) &x;
 
-
-				x = 1;
-
-					c = (char *) &x;
-
-
-
-						return ((int)*c);
+	return ((int)*c);
 
 }
-
-Footer
-
-
