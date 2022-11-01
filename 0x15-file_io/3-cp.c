@@ -2,86 +2,146 @@
 
 #include <stdio.h>
 
+
+
 /**
- * error_file - checks if files can be opened.
  *
- * @file_from: file_from.
+ *  * error_file - checks if files can be opened.
  *
- * @file_to: file_to.
+ *   * @file_from: file_from.
  *
- * @argv: arguments vector.
+ *    * @file_to: file_to.
  *
- * Return: no return.
- */
+ *     * @argv: arguments vector.
+ *
+ *      * Return: no return.
+ *
+ *       */
 
 void error_file(int file_from, int file_to, char *argv[])
+
 {
-	if (file_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	if (file_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+
+		if (file_from == -1)
+
+				{
+
+							dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+
+									exit(98);
+
+										}
+
+			if (file_to == -1)
+
+					{
+
+								dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+
+										exit(99);
+
+											}
+
 }
 
+
+
 /**
- * main - check the code for Holberton School students.
  *
- * @argc: number of arguments.
+ *  * main - check the code for Holberton School students.
  *
- * @argv: arguments vector.
+ *   * @argc: number of arguments.
  *
- * Return: Always 0.
- */
+ *    * @argv: arguments vector.
+ *
+ *     * Return: Always 0.
+ *
+ *      */
 
 int main(int argc, char *argv[])
 
 {
-	int file_from, file_to, err_close;
-	ssize_t count, temp;
 
-	char buffer[1024];
+		int file_from, file_to, err_close;
 
-	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
-		exit(97);
-	}
+			ssize_t count, temp;
 
-	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664)
+				char buffer[1024];
 
-	error_file(file_from, file_to, argv);
 
-	count = 1024;
-	while (count == 1024)
-	{
-		count = read(file_from, buffer, 1024);
-		if (count == -1)
-			error_file(-1, 0, argv);
 
-			temp = write(file_to, buffer, count);
-		if (temp == -1)
-			error_file(0, -1, argv);
-	}
-		err_close = close(file_from);
+					if (argc != 3)
 
-		if (err_close == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
-			exit(100);
-		}
-		err_close = close(file_to);
+							{
 
-		if (err_close == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
-			exit(100);
-		}
+										dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 
-	return (0);
+												exit(97);
+
+													}
+
+
+
+						file_from = open(argv[1], O_RDONLY);
+
+							file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+
+								error_file(file_from, file_to, argv);
+
+
+
+									count = 1024;
+
+										while (count == 1024)
+
+												{
+
+															count = read(file_from, buffer, 1024);
+
+																	if (count == -1)
+
+																					error_file(-1, 0, argv);
+
+																			temp = write(file_to, buffer, count);
+
+																					if (temp == -1)
+
+																									error_file(0, -1, argv);
+
+																						}
+
+
+
+											err_close = close(file_from);
+
+												if (err_close == -1)
+
+														{
+
+																	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
+
+																			exit(100);
+
+																				}
+
+
+
+													err_close = close(file_to);
+
+														if (err_close == -1)
+
+																{
+
+																			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
+
+																					exit(100);
+
+																						}
+
+															return (0);
+
 }
+
+Footer
+
+
