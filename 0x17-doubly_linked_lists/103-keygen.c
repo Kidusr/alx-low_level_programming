@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 
 	srand(b ^ 14);
 
-		p[3] = l[rand() & 63];
+	p[3] = l[rand() & 63];
 
 	for (b = 0, i = 0; i < len; i++)
 
